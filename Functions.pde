@@ -14,4 +14,16 @@ class Functions extends Control{
     d = sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
     return d;
   }
+   protected int function (int X){
+    if(X==1||X==5){
+      X=1;
+    }else if(X==2||X==6){
+      X=2;
+    }else if(X==3||X==7){
+      X=3;
+    }else if(X==4||X==0){
+      X=4;
+    }
+    return X;
+  }
 }

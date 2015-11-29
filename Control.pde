@@ -1,8 +1,70 @@
 class Control{
   Functions Math;
+  Level Guides;
   float[] distances;
   float[] inclines;
   //Print actual distances, inclines and rotations with letter "l"
+  
+  boolean mission_Accomplished(int level, int [] X, int []Y, int[] R,int g){
+    Guides = new Level();
+    boolean t = true;
+    float[] LD = Guides.distances_per_level(level);
+    float[] LI = Guides.inclines_per_level(level);
+    int[] LR = Guides.rotations_per_level(level);
+    float[] D = check_distances(X,Y);
+    float[] I = check_inclines(X,Y);
+    if(R[0]!=LR[0]){
+      int e = LR[0];
+      LR[0]=LR[1];
+      LR[1]=e;
+    }
+    if(R[2]!=LR[2]){
+      int e = LR[2];
+      LR[2]=LR[3];
+      LR[3]=e;
+    }
+     R[5]= R[5]%2;
+    LR[5]= LR[5]%2;
+     R[6]= Math.function(R[6]);
+    LR[6]= Math.function(LR[6]);
+    if(g!=Guides.diamond_state(level)){
+      t=false;
+      println(g);
+      println(Guides.diamond_state(level));
+      println(level);
+    }
+    if(t==true){
+      for(int j=0;j<7;j++){
+       if(R[j] != LR[j] ){
+         t=false;
+       } 
+      }
+    }
+    if(t==true){
+      for(int i=0;i<7;i++){
+        if(t==true){
+          if(D[i]>=LD[i]-10 && D[i]<=LD[i]+10){
+            t=true;
+          }else{
+            t=false;
+          }
+        }
+      }
+    }
+    if(t==true){
+      for(int k=0;k<7;k++){
+        if(t==true){
+          if(I[k]>=LI[k]-.5 && I[k]<=LI[k]+.5){
+            t=true;
+          }else{
+            t=false;
+          }
+        }
+      }
+    }
+    return t;
+  }
+  
   float[] check_distances(int[]X ,int[]Y){
     float[] FX;
     float[] FY;
