@@ -1,5 +1,4 @@
 //Repository.
-
 int Menus = 0;
 int Level = 1;
 int X[];

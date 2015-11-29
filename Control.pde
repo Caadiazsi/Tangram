@@ -53,6 +53,14 @@ class Control{
     if(Level==15){
       I[6]=LI[6];
     }
+    if(Level==8){
+      I[0]=LI[0];
+    }
+    if(Level==1 && I[3]>=LI[3]-3 && I[3]<=LI[3]+3 && I[4]>=LI[4]-3 && I[4]<=LI[4]+3 && I[6]>=LI[6]-8 && I[6]<=LI[6]+8){
+      I[3]=LI[3];
+      I[4]=LI[4];
+      I[6]=LI[6];
+    }
     if(t==true){
       for(int k=0;k<7;k++){
         if(t==true){
