@@ -22,6 +22,9 @@ class Control{
       LR[2]=LR[3];
       LR[3]=e;
     }
+    if(Level==10){
+      I[3]=LI[3];
+    }
      R[5]= R[5]%2;
     LR[5]= LR[5]%2;
      R[6]= Math.function(R[6]);
@@ -39,7 +42,7 @@ class Control{
     if(t==true){
       for(int i=0;i<7;i++){
         if(t==true){
-          if(D[i]>=LD[i]-10 && D[i]<=LD[i]+10){
+          if(D[i]>=LD[i]-20 && D[i]<=LD[i]+20){
             t=true;
           }else{
             t=false;
@@ -47,10 +50,13 @@ class Control{
         }
       }
     }
+    if(Level==15){
+      I[6]=LI[6];
+    }
     if(t==true){
       for(int k=0;k<7;k++){
         if(t==true){
-          if(I[k]>=LI[k]-.5 && I[k]<=LI[k]+.5){
+          if(I[k]>=LI[k]-1 && I[k]<=LI[k]+1){
             t=true;
           }else{
             t=false;
