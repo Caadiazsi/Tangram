@@ -31,21 +31,6 @@ PImage imgL;
     text("6. Press X to exit",275,665,700,700);
   }
   
-  void Game( int Level){
-    fill(0);
-    stroke(255);
-    rect(0,0,800,500);
-    fill(255);
-    stroke(0);
-    rect(0,500,400,300);
-    stroke(0);
-    fill(255);
-    rect(400,500,400,300);
-    textSize(50);
-    fill(0);
-    text("Level:",450,680);
-    text(""+Level+"",650,680);
-  }
   void Game( int Level,int[] px,int[] py,int[] r,int[] c,int g,int get){
     fill(0);
     stroke(255);
@@ -119,5 +104,26 @@ PImage imgL;
     fill(0);
     text("Level:",450,680);
     text(""+Level+"",650,680);
+    int a;
+    int e;
+    e=10;
+    a=510;
+    if(Level==1){
+      imgL = loadImage ("Rect9.png");
+    }else if(Level==2){
+      imgL = loadImage ("2.PNG");
+    }else if(Level==3){
+      imgL = loadImage ("3.PNG");
+    }else if(Level==4){
+      imgL = loadImage ("4.PNG");
+    }else if(Level==5){
+      imgL = loadImage ("5.PNG");
+    }else if(Level==6){
+      background(255);
+      imgL = loadImage ("FINISH.png");
+      e=35;
+      a=349;
+    }
+    image(imgL,e,a);
   }
 }

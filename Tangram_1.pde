@@ -1,5 +1,5 @@
 int Menus = 0;
-int Level = 0;
+int Level = 1;
 int X[];
 int Y[];
 color C[];
