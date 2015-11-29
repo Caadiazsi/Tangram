@@ -131,6 +131,14 @@ PImage imgL;
     }else if(Level==11){
       imgL = loadImage ("11.PNG");
     }else if(Level==12){
+      imgL = loadImage ("12.PNG");
+    }else if(Level==13){
+      imgL = loadImage ("13.PNG");
+    }else if(Level==14){
+      imgL = loadImage ("14.PNG");
+    }else if(Level==15){
+      imgL = loadImage ("15.PNG");
+    }else if(Level==16){
       background(255);
       imgL = loadImage ("FINISH.png");
       e=35;
