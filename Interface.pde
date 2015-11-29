@@ -25,8 +25,8 @@ PImage imgL;
     text("pass to the next level.",270,200);
     text("1. Left Click and move to drag",220,540,700,700);
     text("2. Right Click to rotate",245,565,700,700);
-    text("3. Press Left Arrow to go to the previous level",160,590,700,700);
-    text("4. Press Right Arrow to go to the next level",170,615,700,700);
+    text("3. Press R to reset the shapes",230,590,700,700);
+    text("4. Press Q to flip the parallelogram",200,615,700,700);
     text("5. Press M to comeback to the menu",195,640,700,700);
     text("6. Press X to exit",275,665,700,700);
   }
@@ -123,6 +123,14 @@ PImage imgL;
     }else if(Level==7){
       imgL = loadImage ("7.PNG");
     }else if(Level==8){
+      imgL = loadImage ("8.PNG");
+    }else if(Level==9){
+      imgL = loadImage ("9.PNG");
+    }else if(Level==10){
+      imgL = loadImage ("10.PNG");
+    }else if(Level==11){
+      imgL = loadImage ("11.PNG");
+    }else if(Level==12){
       background(255);
       imgL = loadImage ("FINISH.png");
       e=35;

@@ -40,7 +40,7 @@ void draw (){
     Menux.Game(Level,X,Y,R,C,g,get);
     boolean Accomplish;
     Accomplish = Control.mission_Accomplished(Level,X,Y,R,g);
-    if(Accomplish == true && Level<=7){
+    if(Accomplish == true && Level<=11){
       Level++;
       init();
     }
@@ -112,10 +112,10 @@ void keyPressed(){
  }else if (key == CODED){
    if(Menus == 2){
      if(keyCode == RIGHT){
-       if(Level<=7){
+       if(Level<=11){
          Level++;
-       }else if(Level == 8 ){
-         Level = 8;
+       }else if(Level == 12 ){
+         Level = 12;
        }
      }
    }

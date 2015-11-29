@@ -3,9 +3,7 @@ class Control{
   Level Guides;
   float[] distances;
   float[] inclines;
-  
-  //Print actual distances, inclines and rotations with letter "l"
-  
+    
   boolean mission_Accomplished(int level, int [] X, int []Y, int[] R,int g){
     Guides = new Level();
     boolean t = true;
