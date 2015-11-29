@@ -46,4 +46,78 @@ PImage imgL;
     text("Level:",450,680);
     text(""+Level+"",650,680);
   }
+  void Game( int Level,int[] px,int[] py,int[] r,int[] c,int g,int get){
+    fill(0);
+    stroke(255);
+    rect(0,0,800,500);
+    for(int i=0;i<7;i++){
+      noStroke();
+      pushMatrix();
+      translate(px[i],py[i]);
+      rotate(r[i]*radians(45));
+      fill(c[i]);
+      scale(3);
+      switch(i){
+        case 0:
+        case 1: // Big ones.
+          beginShape(TRIANGLES);
+          vertex(-48,-16);
+          vertex(16,-16);
+          vertex(16,48);
+          endShape();
+          break;
+        case 2:
+        case 3: // Small ones.
+          beginShape(TRIANGLES);
+          vertex(-24,-8);
+          vertex(8,-8);
+          vertex(8,24);
+          endShape();
+          break;
+        case 4: // Medium
+          beginShape(TRIANGLES);
+          vertex(-16,0);
+          vertex(16,32);
+          vertex(16,-32);
+          endShape();
+          break;
+        case 5: // Square
+          rect(-16,-16,32,32);
+          break;
+        case 6: // Diamond
+          if (g==0){
+            beginShape(QUADS);
+            vertex(-16,0);
+            vertex(16,32); 
+            vertex(16,0);
+            vertex(-16,-32);
+            endShape();
+            break;
+          }else if (g == 1){
+            beginShape(QUADS);
+            vertex(-16,0);
+            vertex(16,-32); 
+            vertex(16,0);
+            vertex(-16,32);
+            endShape();
+            break;
+          }
+        }   
+        popMatrix();
+      }
+    if( mousePressed && (get != -1) ){
+      px[get] += mouseX-pmouseX;
+      py[get] += mouseY-pmouseY;
+    }
+    fill(255);
+    stroke(0);
+    rect(0,500,400,300);
+    stroke(0);
+    fill(255);
+    rect(400,500,400,300);
+    textSize(50);
+    fill(0);
+    text("Level:",450,680);
+    text(""+Level+"",650,680);
+  }
 }
