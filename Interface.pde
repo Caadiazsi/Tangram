@@ -109,7 +109,7 @@ PImage imgL;
     e=10;
     a=510;
     if(Level==1){
-      imgL = loadImage ("Rect9.png");
+      imgL = loadImage ("1.PNG");
     }else if(Level==2){
       imgL = loadImage ("2.PNG");
     }else if(Level==3){
@@ -119,6 +119,10 @@ PImage imgL;
     }else if(Level==5){
       imgL = loadImage ("5.PNG");
     }else if(Level==6){
+      imgL = loadImage ("6.PNG");
+    }else if(Level==7){
+      imgL = loadImage ("7.PNG");
+    }else if(Level==8){
       background(255);
       imgL = loadImage ("FINISH.png");
       e=35;

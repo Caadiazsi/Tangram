@@ -6,6 +6,7 @@ color C[];
 int R[]; 
 int get;
 int g = 0;
+
 Interface Menux;
 Shapes Start;
 Control Control;
@@ -37,6 +38,12 @@ void draw (){
     Menux.Instructions();
   }else if (Menus == 2){
     Menux.Game(Level,X,Y,R,C,g,get);
+    boolean Accomplish;
+    Accomplish = Control.mission_Accomplished(Level,X,Y,R,g);
+    if(Accomplish == true && Level<=7){
+      Level++;
+      init();
+    }
   }
 }
 
@@ -98,17 +105,17 @@ void keyPressed(){
    println(Control.check_distances(X,Y));
    println("INCLINES");
    println(Control.check_inclines(X,Y));
-   println("ROTATOINS");
+   println("ROTATIONS");
    println(R);
    println("PARALLELOGRAM STATE");
    println(g);
  }else if (key == CODED){
    if(Menus == 2){
      if(keyCode == RIGHT){
-       if(Level<=5){
+       if(Level<=7){
          Level++;
-       }else if(Level == 6 ){
-         Level = 6;
+       }else if(Level == 8 ){
+         Level = 8;
        }
      }
    }

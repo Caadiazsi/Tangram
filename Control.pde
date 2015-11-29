@@ -3,6 +3,7 @@ class Control{
   Level Guides;
   float[] distances;
   float[] inclines;
+  
   //Print actual distances, inclines and rotations with letter "l"
   
   boolean mission_Accomplished(int level, int [] X, int []Y, int[] R,int g){
@@ -29,9 +30,6 @@ class Control{
     LR[6]= Math.function(LR[6]);
     if(g!=Guides.diamond_state(level)){
       t=false;
-      println(g);
-      println(Guides.diamond_state(level));
-      println(level);
     }
     if(t==true){
       for(int j=0;j<7;j++){
