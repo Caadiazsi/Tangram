@@ -1,4 +1,4 @@
-class Functions {
+class Functions extends Control{
   protected float mid_Point(float x1,float x2){
     float pm;
     pm=(x1+x2)/2;

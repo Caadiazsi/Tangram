@@ -8,10 +8,12 @@ int get;
 int g = 0;
 Interface Menux;
 Shapes Start;
+Control Control;
 
 void setup(){
   Menux = new Interface();
   Start = new Shapes();
+  Control = new Control();
   size(800,800);
   X = new int[7];
   Y = new int[7];
@@ -81,8 +83,25 @@ void keyPressed(){
    Menus = 1;
  } else if (key == 'm' || key == 'M'){
    Menus = 0;
+ }else if ((key == 'q' || key =='Q') && Menus==2){
+   if(g==0){
+     g=1;
+     R[6]=(R[6]+2)%8;
+   }else if(g==1){
+     g=0;
+     R[6]=(R[6]-2)%8;
+   }
  }else if (key == 'x' || key == 'X'){
    exit();
+ }else if(Menus==2 && (key == 'l'|| key== 'L')){
+   println("DISTANCES");
+   println(Control.check_distances(X,Y));
+   println("INCLINES");
+   println(Control.check_inclines(X,Y));
+   println("ROTATOINS");
+   println(R);
+   println("PARALLELOGRAM STATE");
+   println(g);
  }else if (key == CODED){
    if(Menus == 2){
      if(keyCode == RIGHT){
