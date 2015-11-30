@@ -14,7 +14,7 @@ Largo plazo:
 -Adecuar el codigo para facilitar la creacion de nuevos niveles.
 
 Instrucciones de uso:
-!!NOTA: No es necesario el uso de ninguna libreria para poder correr el programa.!!
+NOTA:!!No es necesario el uso de ninguna libreria para poder correr el programa.!!
 
 Cuando se inicia el programa, tendra 3 opciones:
 1. Presionar ENTER y empezar a jugar.
@@ -23,8 +23,8 @@ Cuando se inicia el programa, tendra 3 opciones:
 
 Los comandos para jugar son los siguientes:
 1.Mantener click izquierdo y arrastrar para mover las figuras.
-2.Click izquierdo para rotar las figuras.
-3.Presionar Q para darle una "vuelta" al paralelogramo.
+2.Click derecho para rotar las figuras.
+3.Presionar Q para darle girar el deje del paralelogramo.
 4.Presionar R para formar un cuadrado con las figuras.
 5.Presionar M para ir al menu.
 6. Presionar X para salir.
