@@ -41,7 +41,7 @@ void draw (){
     Menux.Game(Level,X,Y,R,C,g,get);
     boolean Accomplish;
     Accomplish = Control.mission_Accomplished(Level,X,Y,R,g);
-    if(Accomplish == true && Level<=15){
+    if(Accomplish == true && Level<=15 && !mousePressed){
       Level++;
       init();
     }
@@ -91,6 +91,9 @@ void keyPressed(){
    Menus = 1;
  } else if (key == 'm' || key == 'M'){
    Menus = 0;
+   if(Level==16){
+     Level=1;
+   }
  }else if ((key == 'q' || key =='Q') && Menus==2){
    if(g==0){
      g=1;

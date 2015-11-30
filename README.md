@@ -1,8 +1,6 @@
 # Tangram
-Tangram game
-La ultima version del proyecto se puede encontar en el siguiente enlace :
-https://github.com/Caadiazsi/Tangram
-en el commit : "a73384d"
+
+La ultima version del proyecto se puede encontar en el ultimo commit realizado.
 Objetivos:
 Corto plazo:
 -Presentar el codigo del juego Tangram. junto a un analizador de figura.
@@ -28,6 +26,8 @@ Los comandos para jugar son los siguientes:
 4.Presionar R para formar un cuadrado con las figuras.
 5.Presionar M para ir al menu.
 6. Presionar X para salir.
+
+NOTA:!!Dentro del juego utilizar las flechas del teclado para pasar rapidamente entre los diferentes niveles!!
 
 MOVIMIENTO.
 Para mover las figuras se analiza el color en las coordenadas del mouse y al momento de hacer click y arrastrar se arrastra la
