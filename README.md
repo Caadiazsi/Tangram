@@ -24,7 +24,7 @@ Cuando se inicia el programa, tendra 3 opciones:
 Los comandos para jugar son los siguientes:
 1.Mantener click izquierdo y arrastrar para mover las figuras.
 2.Click derecho para rotar las figuras.
-3.Presionar Q para darle girar el deje del paralelogramo.
+3.Presionar Q para girar el eje del paralelogramo.
 4.Presionar R para formar un cuadrado con las figuras.
 5.Presionar M para ir al menu.
 6. Presionar X para salir.
